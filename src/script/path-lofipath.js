@@ -68,7 +68,10 @@ let pathLofiPath = ( glCatPath, auto, callback ) => {
           glCat.uniform1f( 'deformFreq', auto( 'deformFreq' ) );
           glCat.uniform1f( 'deformOffset', auto( 'deformOffset' ) );
 
+          glCat.uniform1i( 'isPoint', false );
           gl.drawArrays( gl.LINE_STRIP, 0, arr.length / 2 );
+
+          glCat.uniform1i( 'isPoint', true );
           gl.drawArrays( gl.POINTS, 0, arr.length / 2 );
         } );
       }

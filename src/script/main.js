@@ -33,7 +33,7 @@ let saveFrame = () => {
 // ------
 
 let gl = canvas.getContext( 'webgl' );
-gl.enable( gl.CULL_FACE );
+gl.lineWidth( 1 );
 
 let glCat = new GLCat( gl );
 
